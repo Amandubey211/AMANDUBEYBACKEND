@@ -5,15 +5,15 @@ import { sendMail } from "../Utils/Nodemailer.js";
 export const PostMessage = async (req, res) => {
   try {
     const { Name, Email, Message } = req.body;
-    // if (!Name) {
-    //   return res.send("Name Is Not Present");
-    // }
-    // if (!Email) {
-    //   return res.send("Email Is Not Present");
-    // }
-    // if (!Message) {
-    //   return res.send("Message Is Not Present");
-    // }
+    if (!Name) {
+      return res.send("Name Is Not Present");
+    }
+    if (!Email) {
+      return res.send("Email Is Not Present");
+    }
+    if (!Message) {
+      return res.send("Message Is Not Present");
+    }
 
     const Formdata = new FormModel({
       Name: Name,
