@@ -9,10 +9,7 @@ const FormSchema = mongoose.Schema({
   },
   Email: {
     type: String,
-<<<<<<< HEAD
     // unique: true,
-=======
->>>>>>> 55250ddc698929415a61b8efe5ab847c6b5f81c9
     required: true,
     validate: [
       function () {
